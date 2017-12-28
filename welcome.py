@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # This is a example of the usage of OLED 1.3'' 128x64 with I2C
 
 # Import of the necessary libraries

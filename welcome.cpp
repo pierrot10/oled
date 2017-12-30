@@ -73,18 +73,18 @@ void parse_args(int argc, char *argv[])
                 switch (c) 
                 {
                         case 'v': opts.verbose = true   ;       break;
-
+                        
                         case 'o':
                                 opts.oled = (int) atoi(optarg);
                                 
                                 if (opts.oled < 0 || opts.oled >= OLED_LAST_OLED )
                                 {
-                                                //fprintf(stderr, "--oled %d igno$
-                                                fprintf(stderr, "--oled set to 0 $
+                                                fprintf(stderr, "--oled %d ignored must be 0 to %d.\n", opts.oled, OLED_LAST_OLED-1);
+                                                fprintf(stderr, "--oled set to 0 now\n");
                                                 opts.oled = 0;
                                 }
                         break;
-
+                        
                         case 'h':
                                 usage(argv[0]);
                                 exit(EXIT_SUCCESS);

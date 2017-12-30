@@ -24,8 +24,8 @@ int sleep_divisor = 1 ;
         
 // default options values
 s_opts opts = {
-        OLED_ADAFRUIT_SPI_128x32,       // Default oled
-  false                                                                         /$
+        OLED_ADAFRUIT_I2C_128x32,       // Default oled
+  false                                 // Not verbose
 };
 
 
@@ -44,7 +44,7 @@ void usage( char * name)
         printf("Short options are prefixed by \"-\" instead of by \"--\".\n");
         printf("Example :\n");
         printf( "%s -o 1 use a %s OLED\n\n", name, oled_type_str[1]);
-        printf( "%s -o 4 -v use a %s OLED being verbose\n", name, oled_type_str[4$
+        printf( "%s -o 4 -v use a %s OLED being verbose\n", name, oled_type_str[4]);
 }
 
 void parse_args(int argc, char *argv[])
